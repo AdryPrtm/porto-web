@@ -25,13 +25,10 @@
 		/* Absolute paths */
 		"baseUrl": "./src",
 		"paths": {
-			"@components/*": ["components/*"],
-			"@pages/*": ["pages/*"],
-			"@utils/*": ["utils/*"],
-			"@store/*": ["store/*"]
+			"@dashboard/*": ["/modules/dashboard/*"],
+			"@user/*": ["/modules/user/*"]
 		}
 	},
 	"include": ["src", "vite.config.ts"],
 	"references": []
 }
-
