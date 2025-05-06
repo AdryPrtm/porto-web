@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Intro } from "../components/intro";
-import { useAppDispatch, useAppSelector } from "../store";
-import { fetchUser } from "../store/thunks/profileThunk";
+import { useAppDispatch, useAppSelector } from "../../../store";
+import { fetchUser } from "../../../store/thunks/user/profileThunk";
 
 export const IntroFeatures = () => {
 	const dispatch = useAppDispatch();

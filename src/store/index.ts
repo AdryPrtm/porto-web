@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
-import { profileReducer } from "./slices/profileSlice";
-import { certificateReducer } from "./slices/certificateSlice";
-import { projectReducer } from "./slices/projectSlice";
+import { profileReducer } from "./slices/user/profileSlice";
+import { certificateReducer } from "./slices/user/certificateSlice";
+import { projectReducer } from "./slices/user/projectSlice";
 
 const store = configureStore({
 	reducer: {

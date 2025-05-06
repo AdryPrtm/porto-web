@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { fetchProjects } from "../store/thunks/projectThunk";
+import { fetchProjects } from "../../../store/thunks/user/projectThunk";
 import { format } from "date-fns";
-import { useAppDispatch, useAppSelector } from "../store";
+import { useAppDispatch, useAppSelector } from "../../../store";
 import { TimelineItem } from "../components/timeline";
 
 export const ProjectFeatures = () => {

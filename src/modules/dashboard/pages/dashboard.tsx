@@ -1,6 +1,6 @@
 import { ShortStat } from "../features/shortstat";
 
-export const DashboardHome = () => {
+export const Dashboard = () => {
 	return (
 		<div>
 			<ShortStat />

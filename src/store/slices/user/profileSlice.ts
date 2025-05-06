@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchUser } from "../thunks/profileThunk";
+import { fetchUser } from "../../thunks/user/profileThunk";
 
 interface ProfileState {
 	profile: {

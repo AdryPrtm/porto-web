@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchProjects } from "../thunks/projectThunk";
+import { fetchProjects } from "../../thunks/user/projectThunk";
 import { EditorJsContent } from "modules/user/types/editor";
 
 interface Project {

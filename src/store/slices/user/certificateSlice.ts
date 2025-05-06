@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchCertificates } from "../thunks/certificateThunk";
+import { fetchCertificates } from "../../thunks/user/certificateThunk";
 
 interface Certificate {
 	_id: string;
