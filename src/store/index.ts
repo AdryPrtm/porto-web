@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
-import { profileReducer } from "./slices/user/profileSlice";
-import { certificateReducer } from "./slices/user/certificateSlice";
-import { projectReducer } from "./slices/user/projectSlice";
+import { projectAPI } from "./items/projectAPI";
+import { experienceAPI } from "./items/experienceAPI";
+import { certificateAPI } from "./items/certificateAPI";
 
 const store = configureStore({
 	reducer: {
-		user: profileReducer,
-		certificate: certificateReducer,
-		project: projectReducer,
+		[experienceAPI.reducerPath]: experienceAPI.reducer,
+		[projectAPI.reducerPath]: projectAPI.reducer,
+		[certificateAPI.reducerPath]: certificateAPI.reducer,
 	},
 });
 
