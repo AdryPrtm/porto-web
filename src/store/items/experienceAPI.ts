@@ -1,6 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BASE_URI, EXPERIENCE_QUERY } from "constants/apiBaseURI";
-import { AllExperienceResponse, Experience } from "types/experienceTypes";
+import {
+	AllExperienceResponse,
+	ExperienceRequest,
+	ExperienceResponse,
+} from "types/experienceTypes";
 
 export const experienceAPI = createApi({
 	reducerPath: "experienceAPI",
@@ -9,10 +13,35 @@ export const experienceAPI = createApi({
 		getAllExperiences: builder.query<AllExperienceResponse, void>({
 			query: () => `${EXPERIENCE_QUERY}/all`,
 		}),
-		getExperienceById: builder.query<Experience, string>({
+		getExperienceById: builder.query<ExperienceResponse, string>({
 			query: (id) => `${EXPERIENCE_QUERY}/${id}`,
 		}),
-		postExperience: builder.mutation<void, void>({}),
+		postExperience: builder.mutation<ExperienceResponse, ExperienceRequest>({
+			query: (experience) => ({
+				url: `${EXPERIENCE_QUERY}/create`,
+				method: "POST",
+				body: experience,
+			}),
+		}),
+		updateExperience: builder.mutation<
+			ExperienceResponse,
+			{ id: string; experience: ExperienceRequest }
+		>({
+			query: ({ id, experience }) => ({
+				url: `${EXPERIENCE_QUERY}/update/${id}`,
+				method: "PUT",
+				body: experience,
+			}),
+		}),
+		deleteExperience: builder.mutation<
+			{ success: boolean; message: string },
+			string
+		>({
+			query: (id) => ({
+				url: `${EXPERIENCE_QUERY}/delete/${id}`,
+				method: "DELETE",
+			}),
+		}),
 	}),
 });
 

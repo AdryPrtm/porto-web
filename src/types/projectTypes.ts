@@ -10,4 +10,21 @@ export type Project = {
 	updatedAt: string;
 };
 
-export type AllProjectResponse = Project[];
+export type ProjectResponse = {
+	success: boolean;
+	message: string;
+	data: Project;
+};
+
+export type AllProjectResponse = {
+	success: boolean;
+	message: string;
+	data: Project[];
+};
+
+export type ProjectRequest = {
+	title: string;
+	description: EditorJsContent;
+	technology: string;
+	project_thumbnail_image: string;
+};

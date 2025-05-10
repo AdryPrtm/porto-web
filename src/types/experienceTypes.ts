@@ -13,4 +13,23 @@ export type Experience = {
 	__v: number;
 };
 
-export type AllExperienceResponse = Experience[];
+export type ExperienceResponse = {
+	success: boolean;
+	message: string;
+	data: Experience;
+};
+
+export type AllExperienceResponse = {
+	success: boolean;
+	message: string;
+	data: Experience[];
+};
+
+export type ExperienceRequest = {
+	entity: string;
+	position: string;
+	description: EditorJsContent;
+	type: string;
+	startDate: Date;
+	endDate: Date;
+};

@@ -12,3 +12,22 @@ export type LoginResponse = {
 export type TokenState = {
 	token: string;
 };
+
+export type User = {
+	_id: string;
+	name: string;
+	bio: string;
+	image: string;
+	socials: [
+		{
+			appname: string;
+			link: string;
+		}
+	];
+};
+
+export type UserResponse = {
+	success: boolean;
+	message: string;
+	data: User[];
+};
