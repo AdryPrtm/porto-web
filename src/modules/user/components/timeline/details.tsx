@@ -1,6 +1,6 @@
 import React from "react";
 import Output from "editorjs-react-renderer";
-import { EditorJsContent } from "modules/user/types/editor";
+import { EditorJsContent } from "types/editorTypes";
 
 type TimelineCardProps = {
 	title: string;

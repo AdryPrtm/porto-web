@@ -9,6 +9,8 @@ const PROJECT_QUERY = "project";
 const CERTIFICATE_QUERY = "certificate";
 const EXPERIENCE_QUERY = "experience";
 
+const LOGIN_QUERY = "auth/login";
+
 export {
 	BASE_URI,
 	API_VERSION,
@@ -16,4 +18,5 @@ export {
 	PROJECT_QUERY,
 	CERTIFICATE_QUERY,
 	EXPERIENCE_QUERY,
+	LOGIN_QUERY,
 };

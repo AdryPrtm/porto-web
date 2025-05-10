@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { fetchCertificates } from "../../../store/thunks/user/certificateThunk";
 import { useAppDispatch, useAppSelector } from "../../../store";
 import { Certificate } from "../components/certificate";
 

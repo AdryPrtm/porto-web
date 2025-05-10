@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import Output from "editorjs-react-renderer";
-import { EditorJsContent } from "modules/user/types/editor";
+import { EditorJsContent } from "types/editorTypes";
 import { FaXmark } from "react-icons/fa6";
 import { TimelineCard } from "./details";
 
