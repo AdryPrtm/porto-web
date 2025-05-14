@@ -45,5 +45,10 @@ export const experienceAPI = createApi({
 	}),
 });
 
-export const { useGetAllExperiencesQuery, useGetExperienceByIdQuery } =
-	experienceAPI;
+export const {
+	useGetAllExperiencesQuery,
+	useGetExperienceByIdQuery,
+	usePostExperienceMutation,
+	useUpdateExperienceMutation,
+	useDeleteExperienceMutation,
+} = experienceAPI;

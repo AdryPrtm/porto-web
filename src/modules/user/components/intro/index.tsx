@@ -1,7 +1,7 @@
 interface IntroProps {
-	name: string;
-	description: string;
-	imageUrl: string;
+	name?: string;
+	description?: string;
+	imageUrl?: string;
 }
 
 export const Intro = ({ name, description, imageUrl }: IntroProps) => {

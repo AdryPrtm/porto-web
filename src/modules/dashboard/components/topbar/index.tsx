@@ -8,7 +8,7 @@ export const TopBar = () => {
 					<MdNotificationsNone size={36} />
 				</div>
 				<div className='flex flex-row items-center space-x-4'>
-					<img className='h-12' src='/public/assets/logo.png' alt='' />
+					{/* <img className='h-12' src='/public/assets/logo.png' alt='' /> */}
 					<div className='flex flex-row items-center space-x-4'>
 						<div className='flex flex-col'>
 							<h2 className='text-xl font-bold'>Adryan Pratama</h2>

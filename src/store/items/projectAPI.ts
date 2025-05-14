@@ -1,15 +1,19 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BASE_URI, PROJECT_QUERY } from "constants/apiBaseURI";
-import { ProjectRequest, ProjectResponse } from "types/projectTypes";
+import {
+	AllProjectResponse,
+	ProjectRequest,
+	ProjectResponse,
+} from "types/projectTypes";
 
 export const projectAPI = createApi({
 	reducerPath: "projectAPI",
 	baseQuery: fetchBaseQuery({ baseUrl: BASE_URI }),
 	endpoints: (builder) => ({
-		getAllProjects: builder.query<void, void>({
+		getAllProjects: builder.query<AllProjectResponse, void>({
 			query: () => `${PROJECT_QUERY}/all`,
 		}),
-		getProjectById: builder.query<void, string>({
+		getProjectById: builder.query<ProjectResponse, string>({
 			query: (id) => `${PROJECT_QUERY}/${id}`,
 		}),
 		postProject: builder.mutation<ProjectResponse, ProjectRequest>({

@@ -31,3 +31,14 @@ export type UserResponse = {
 	message: string;
 	data: User[];
 };
+
+export type UserRequest = {
+	name: string;
+	bio: string;
+	socials: [
+		{
+			appname: string;
+			link: string;
+		}
+	];
+};

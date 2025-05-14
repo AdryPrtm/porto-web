@@ -7,7 +7,7 @@ export const DashboardRoute = () => {
 		<div className='w-screen font-montserrat bg-slate-100'>
 			<div className='w-full flex flex-row'>
 				<Sidebar />
-				<div className='w-full flex flex-col space-y-4'>
+				<div className='w-full flex flex-col'>
 					<TopBar />
 					<Outlet />
 				</div>

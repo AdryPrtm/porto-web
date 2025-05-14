@@ -4,7 +4,7 @@ import { Navigation } from "modules/user/components/navigation";
 import Aurora from "modules/user/utils/aurora";
 import { IntroFeatures } from "../features/intro";
 import { CertificateFeatures } from "../features/certif";
-import { ProjectFeatures } from "../features/project";
+// import { ProjectFeatures } from "../features/project";
 
 export const HomeRoute = () => {
 	return (
@@ -29,11 +29,11 @@ export const HomeRoute = () => {
 								<h2 className='text-white text-2xl font-bold mb-6'>
 									EXPERIENCE
 								</h2>
-								<ProjectFeatures />
+								{/* <ProjectFeatures /> */}
 							</div>
 							<div className='bg-black p-8 rounded-lg w-2xl mx-auto'>
 								<h2 className='text-white text-2xl font-bold mb-6'>PROJECTS</h2>
-								<ProjectFeatures />
+								{/* <ProjectFeatures /> */}
 							</div>
 						</div>
 						<CertificateFeatures />

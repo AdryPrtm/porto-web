@@ -8,13 +8,13 @@ export const ProjectFeatures: React.FC = () => {
 	// const [open, setOpen] = useState(false);
 
 	if (isLoading) return <p>Loading...</p>;
-	if (error) return <p>Error: {error}</p>;
+	if (error) return <div>Error: {error.toString()}</div>;
 
 	// const handleOpen = () => {};
 
 	return (
 		<div className='space-y-6 border-l border-gray-800'>
-			{data.map((data) => (
+			{data?.data.map((data) => (
 				<TimelineItem
 					key={data._id}
 					title={data.title}

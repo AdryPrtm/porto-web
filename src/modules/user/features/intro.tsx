@@ -1,24 +1,19 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { Intro } from "../components/intro";
+import { useGetProfileQuery } from "store/user/userAPI";
 
 export const IntroFeatures = () => {
-	const dispatch = useAppDispatch();
-	const { profile, loading, error } = useAppSelector((state) => state.user);
+	const { data, isLoading, error } = useGetProfileQuery();
 
-	useEffect(() => {
-		dispatch(fetchUser());
-	}, [dispatch]);
-
-	if (loading === "pending") return <p>Loading...</p>;
-	if (error) return <p>Error: {error}</p>;
-	if (!profile) return <p>No profile data available.</p>;
+	if (isLoading) return <p>Loading...</p>;
+	if (error) return <div>Error: {error.toString()}</div>;
 
 	return (
 		<div>
 			<Intro
-				name={profile.name}
-				description={profile.bio}
-				imageUrl={profile.image}
+				name={data?.data[0].name}
+				description={data?.data[0].bio}
+				imageUrl={data?.data[0].image}
 			/>
 		</div>
 	);

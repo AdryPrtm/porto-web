@@ -1,27 +1,20 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../../store";
+import { useGetAllCertificatesQuery } from "store/items/certificateAPI";
 import { Certificate } from "../components/certificate";
 
 export const CertificateFeatures = () => {
-	const dispatch = useAppDispatch();
-	const { certificates, loading, error } = useAppSelector(
-		(state) => state.certificate
-	);
+	const { data, error, isLoading } = useGetAllCertificatesQuery();
 
-	useEffect(() => {
-		dispatch(fetchCertificates());
-	}, [dispatch]);
+	if (isLoading) return <p>Loading...</p>;
 
-	if (loading) return <p>Loading...</p>;
-	if (error) return <p>Error: {error}</p>;
-	if (!certificates.length) return <p>No certificate data available.</p>;
+	if (error) return <div>Error: {error.toString()}</div>;
+	// if (!certificates?.length) return <p>No certificate data available.</p>;
 
 	return (
 		<div className='w-full flex flex-col space-y-4'>
 			<h1 className='text-2xl font-bold'>CERTIFICATE</h1>
 			<div className='border border-gray-800 p-6 rounded-xl'>
 				<div className='flex flex-col space-y-6'>
-					{certificates.map((cert) => (
+					{data?.data.map((cert) => (
 						<Certificate
 							key={cert._id}
 							title={cert.title}
