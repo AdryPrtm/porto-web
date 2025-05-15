@@ -18,6 +18,7 @@ export const userLoginAPI = createApi({
 			async onQueryStarted(_, { dispatch, queryFulfilled }) {
 				try {
 					const { data } = await queryFulfilled;
+					console.log(data);
 					dispatch(saveCurrentToken(data.token));
 				} catch (error) {
 					console.error("Login failed:", error);

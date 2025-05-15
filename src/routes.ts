@@ -31,6 +31,24 @@ export const createRouter = () =>
 					],
 				},
 				{
+					path: "auth",
+					lazy: async () => {
+						const { AuthRoute } = await import("./modules/login");
+						return { Component: AuthRoute };
+					},
+					children: [
+						{
+							path: "login",
+							lazy: async () => {
+								const { LoginPage } = await import(
+									"./modules/login/pages/login"
+								);
+								return { Component: LoginPage };
+							},
+						},
+					],
+				},
+				{
 					path: "dashboard",
 					lazy: async () => {
 						const { DashboardRoute } = await import("./modules/dashboard");
