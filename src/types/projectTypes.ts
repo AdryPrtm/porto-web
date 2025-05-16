@@ -1,3 +1,4 @@
+import { OutputData } from "@editorjs/editorjs";
 import { EditorJsContent } from "./editorTypes";
 
 export type Project = {
@@ -5,7 +6,9 @@ export type Project = {
 	title: string;
 	description: EditorJsContent;
 	technology: string;
-	project_thumbnail_image: string;
+	project_thumbnail_image?: string;
+	year: string;
+	link?: string;
 	createdAt: string;
 	updatedAt: string;
 };
@@ -24,7 +27,9 @@ export type AllProjectResponse = {
 
 export type ProjectRequest = {
 	title: string;
-	description: EditorJsContent;
+	description: OutputData;
 	technology: string;
 	project_thumbnail_image: string;
+	year: string;
+	link?: string;
 };

@@ -1,3 +1,4 @@
+import { OutputData } from "@editorjs/editorjs";
 import { EditorJsContent } from "./editorTypes";
 
 export type Experience = {
@@ -28,7 +29,7 @@ export type AllExperienceResponse = {
 export type ExperienceRequest = {
 	entity: string;
 	position: string;
-	description: EditorJsContent;
+	description: OutputData;
 	type: string;
 	startDate: Date;
 	endDate: Date;

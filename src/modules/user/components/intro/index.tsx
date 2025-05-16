@@ -17,7 +17,7 @@ export const Intro = ({ name, description, imageUrl }: IntroProps) => {
 			</div>
 			<div className='relative w-1/4 z-10'>
 				<img
-					src={imageUrl ? imageUrl : "/public/assets/placeholder.png"}
+					src={imageUrl ? imageUrl : "/assets/placeholder.png"}
 					alt='photo'
 					className='rounded-4xl -rotate-6 hover:rotate-0 transition-transform duration-300'
 				/>

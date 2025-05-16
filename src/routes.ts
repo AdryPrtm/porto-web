@@ -85,10 +85,10 @@ export const createRouter = () =>
 						{
 							path: "project",
 							lazy: async () => {
-								const { Projects } = await import(
+								const { ProjectForm } = await import(
 									"./modules/dashboard/pages/project"
 								);
-								return { Component: Projects };
+								return { Component: ProjectForm };
 							},
 						},
 						{

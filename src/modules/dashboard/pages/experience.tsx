@@ -18,7 +18,7 @@ export const ExperienceForm = () => {
 	const [formData, setFormData] = useState({
 		entity: "",
 		position: "",
-		type: "full-time",
+		type: "job",
 		startDate: null as Date | null,
 		endDate: null as Date | null,
 		description: {} as OutputData,
@@ -48,12 +48,13 @@ export const ExperienceForm = () => {
 			setFormData({
 				entity: "",
 				position: "",
-				type: "full-time",
+				type: "job",
 				startDate: null,
 				endDate: null,
 				description: {} as OutputData,
 			});
 		} catch (err) {
+			console.error("Error submitting experience:", err);
 			alert(`Error submitting experience. ${err}`);
 		}
 	};
@@ -114,10 +115,8 @@ export const ExperienceForm = () => {
 					className='border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
 					required
 				>
-					<option value='full-time'>Full-Time</option>
-					<option value='part-time'>Part-Time</option>
-					<option value='contract'>Contract</option>
-					<option value='internship'>Internship</option>
+					<option value='job'>Job</option>
+					<option value='organizational'>Organizational</option>
 				</select>
 			</div>
 

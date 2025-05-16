@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 // import Output from "editorjs-react-renderer";
-import { EditorJsContent } from "types/editorTypes";
 import { FaXmark } from "react-icons/fa6";
 import { TimelineCard } from "./details";
+// import { OutputData } from "@editorjs/editorjs";
+import { EditorJsContent } from "types/editorTypes";
 
 type TimelineItemProps = {
 	title: string;

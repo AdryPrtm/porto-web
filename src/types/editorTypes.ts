@@ -24,6 +24,6 @@ export type ListBlock = {
 export type EditorJsBlock = ParagraphBlock | HeaderBlock | ListBlock;
 
 export interface EditorJsContent {
-	time: number;
+	time?: number;
 	blocks: EditorJsBlock[];
 }

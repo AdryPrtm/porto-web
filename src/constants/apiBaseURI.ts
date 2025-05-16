@@ -13,6 +13,7 @@ const FILE_QUERY = "file/upload";
 const LOGIN_QUERY = "auth/login";
 
 export {
+	BASE_URL,
 	BASE_URI,
 	API_VERSION,
 	USER_QUERY,

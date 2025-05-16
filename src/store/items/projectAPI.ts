@@ -1,5 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { BASE_URI, PROJECT_QUERY } from "constants/apiBaseURI";
+import { selectToken } from "hooks/useToken";
+import { RootState } from "store";
 import {
 	AllProjectResponse,
 	ProjectRequest,
@@ -8,7 +10,16 @@ import {
 
 export const projectAPI = createApi({
 	reducerPath: "projectAPI",
-	baseQuery: fetchBaseQuery({ baseUrl: BASE_URI }),
+	baseQuery: fetchBaseQuery({
+		baseUrl: BASE_URI,
+		prepareHeaders: (headers, { getState }) => {
+			const token = selectToken((getState as () => RootState)());
+			if (token) {
+				headers.set("Authorization", `Bearer ${token}`);
+			}
+			return headers;
+		},
+	}),
 	endpoints: (builder) => ({
 		getAllProjects: builder.query<AllProjectResponse, void>({
 			query: () => `${PROJECT_QUERY}/all`,
@@ -45,4 +56,10 @@ export const projectAPI = createApi({
 	}),
 });
 
-export const { useGetAllProjectsQuery, useGetProjectByIdQuery } = projectAPI;
+export const {
+	useGetAllProjectsQuery,
+	useGetProjectByIdQuery,
+	usePostProjectMutation,
+	useUpdateProjectMutation,
+	useDeleteProjectMutation,
+} = projectAPI;
