@@ -2,7 +2,6 @@ import { memo, useMemo } from "react";
 import { format } from "date-fns";
 import { useGetAllProjectsQuery } from "store/items/projectAPI";
 import { CardWimages } from "../components/cards/cardImages";
-import { BASE_URL } from "constants/apiBaseURI";
 
 export const ProjectFeatures = memo(() => {
 	const { data, error, isLoading } = useGetAllProjectsQuery();
@@ -19,9 +18,7 @@ export const ProjectFeatures = memo(() => {
 			.map((proj) => ({
 				...proj,
 				formattedDate: format(new Date(proj.year), "MMMM yyyy"),
-				imageUrl: proj.project_thumbnail_image
-					? `${BASE_URL}/document/thumbnail_image/${proj.project_thumbnail_image}`
-					: undefined,
+				imageUrl: proj.project_thumbnail_image,
 			}));
 	}, [data]);
 
