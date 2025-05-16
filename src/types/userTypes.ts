@@ -18,12 +18,7 @@ export type User = {
 	name: string;
 	bio: string;
 	image: string;
-	socials: [
-		{
-			appname: string;
-			link: string;
-		}
-	];
+	social: Social[];
 };
 
 export type UserResponse = {
@@ -35,10 +30,10 @@ export type UserResponse = {
 export type UserRequest = {
 	name: string;
 	bio: string;
-	socials: [
-		{
-			appname: string;
-			link: string;
-		}
-	];
+	social: Social[];
+};
+
+export type Social = {
+	app_name: string;
+	link: string;
 };

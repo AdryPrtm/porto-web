@@ -4,31 +4,26 @@ export const createRouter = () =>
 	createBrowserRouter([
 		{
 			path: "/",
+			lazy: async () => {
+				const { UserRoute } = await import("./modules/user");
+				return { Component: UserRoute };
+			},
 			children: [
 				{
-					path: "user",
+					index: true,
 					lazy: async () => {
-						const { UserRoute } = await import("./modules/user");
-						return { Component: UserRoute };
+						const { HomeRoute } = await import("./modules/user/pages/home");
+						return { Component: HomeRoute };
 					},
-					children: [
-						{
-							index: true,
-							lazy: async () => {
-								const { HomeRoute } = await import("./modules/user/pages/home");
-								return { Component: HomeRoute };
-							},
-						},
-						{
-							path: "profile",
-							lazy: async () => {
-								const { ProfileRoute } = await import(
-									"./modules/user/pages/profile"
-								);
-								return { Component: ProfileRoute };
-							},
-						},
-					],
+				},
+				{
+					path: "profile",
+					lazy: async () => {
+						const { ProfileRoute } = await import(
+							"./modules/user/pages/profile"
+						);
+						return { Component: ProfileRoute };
+					},
 				},
 				{
 					path: "auth",

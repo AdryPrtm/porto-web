@@ -1,5 +1,9 @@
-import { RouterProvider } from "react-router-dom";
+import { Navigate, RouterProvider } from "react-router-dom";
 import { createRouter } from "./routes";
+
+export const RedirectToUser = () => {
+	return <Navigate to='/user' replace />;
+};
 
 const AppRouter = () => {
 	const router = createRouter();

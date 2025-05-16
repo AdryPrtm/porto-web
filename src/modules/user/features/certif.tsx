@@ -11,9 +11,11 @@ export const CertificateFeatures = () => {
 
 	return (
 		<div className='w-full flex flex-col space-y-4'>
-			<h1 className='text-2xl font-bold'>CERTIFICATE</h1>
+			<h1 className='text-2xl font-bold text-center sm:text-left'>
+				CERTIFICATE
+			</h1>
 			<div className='border border-gray-800 p-6 rounded-xl'>
-				<div className='flex flex-col space-y-6'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 					{data?.data.map((cert) => (
 						<Certificate
 							key={cert._id}
@@ -24,11 +26,11 @@ export const CertificateFeatures = () => {
 							id={cert._id}
 						/>
 					))}
-					<div className='border border-gray-800 px-4 py-2 rounded-lg hover:bg-white hover:text-black hover:font-bold transition-colors duration-300'>
+					{/* <div className='border border-gray-800 px-4 py-2 rounded-lg hover:bg-white hover:text-black hover:font-bold transition-colors duration-300'>
 						<div className='flex justify-center'>
 							<h2>SHOW ALL CERTIFICATES</h2>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

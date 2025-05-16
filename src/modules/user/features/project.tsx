@@ -6,6 +6,7 @@ import { BASE_URL } from "constants/apiBaseURI";
 
 export const ProjectFeatures = memo(() => {
 	const { data, error, isLoading } = useGetAllProjectsQuery();
+	console.log(data);
 
 	const sortedProjects = useMemo(() => {
 		if (!data?.data) return [];
@@ -39,8 +40,6 @@ export const ProjectFeatures = memo(() => {
 						date={proj.formattedDate}
 						subtitle={proj.technology}
 						link={proj.link}
-						// If you have an EditorJsRenderer, use it here:
-						// description={<EditorJsRenderer data={proj.description} />}
 						description={proj.description}
 						imageUrl={proj.imageUrl}
 					/>

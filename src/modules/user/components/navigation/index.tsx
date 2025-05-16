@@ -9,16 +9,16 @@ export const Navigation = () => {
 			{/* <div className='h-full flex flex-row items-center justify-around'>
 				<div className='w-1/2 flex justify-center'> */}
 			<div className='h-full w-full flex flex-row items-center justify-around text-lg'>
-				<a href='' className='hover:font-semibold'>
+				<a href='#' className='hover:font-semibold'>
 					Home
 				</a>
-				<a href='' className='hover:font-semibold'>
+				<a href='#experience' className='hover:font-semibold'>
 					Experience
 				</a>
-				<a href='' className='hover:font-semibold'>
+				<a href='#project' className='hover:font-semibold'>
 					Projects
 				</a>
-				<a href='' className='hover:font-semibold'>
+				<a href='#certificate' className='hover:font-semibold'>
 					Certificate
 				</a>
 				<a href='#contact' className='hover:font-semibold'>

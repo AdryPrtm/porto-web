@@ -1,5 +1,5 @@
 import { Contact } from "modules/user/components/contact";
-import { Interest } from "modules/user/components/interest";
+// import { Interest } from "modules/user/components/interest";
 import { Navigation } from "modules/user/components/navigation";
 import Aurora from "modules/user/utils/aurora";
 import { IntroFeatures } from "../features/intro";
@@ -25,8 +25,8 @@ export const HomeRoute = () => {
 							<Navigation />
 						</div>
 						<IntroFeatures />
-						<Interest />
-						<div className='flex flex-row justify-center'>
+						{/* <Interest /> */}
+						<div className='flex flex-row justify-center' id='experience'>
 							<div className='bg-black p-8 rounded-lg w-2xl mx-auto'>
 								<h2 className='text-white text-2xl font-bold mb-6'>
 									EXPERIENCE
@@ -34,8 +34,12 @@ export const HomeRoute = () => {
 								<ExperienceFeatures />
 							</div>
 						</div>
-						<ProjectFeatures />
-						<CertificateFeatures />
+						<div id='project'>
+							<ProjectFeatures />
+						</div>
+						<div id='certificate'>
+							<CertificateFeatures />
+						</div>
 					</div>
 				</div>
 				<div id='contact'>
