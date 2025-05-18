@@ -1,5 +1,6 @@
 import { useToken } from "hooks/useToken";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLoginUserMutation } from "store/user/userLoginAPI";
 
 export const LoginPage: React.FC = () => {
@@ -7,11 +8,13 @@ export const LoginPage: React.FC = () => {
 	const [password, setPassword] = useState("");
 	const [loginUser, { isLoading, error }] = useLoginUserMutation();
 	const token = useToken();
+	const navigate = useNavigate();
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		try {
 			await loginUser({ username, password }).unwrap();
+			navigate("/dashboard");
 			console.log(token);
 		} catch (err) {
 			console.error(err);
