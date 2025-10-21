@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cert-1",
+    "name": "AWS Certified Solutions Architect - Associate",
+    "issuer": "Amazon Web Services",
+    "issueDate": "2021-11-01",
+    "expirationDate": "2024-11-01",
+    "credentialId": "ABC123XYZ",
+    "credentialUrl": "https://www.credly.com/badges/abc123xyz"
+  },
+  {
+    "id": "cert-2",
+    "name": "Professional Scrum Master I",
+    "issuer": "Scrum.org",
+    "issueDate": "2022-05-20",
+    "expirationDate": null,
+    "credentialId": "PSM-456789",
+    "credentialUrl": "https://www.scrum.org/certificates/psm-456789"
+  }
+]

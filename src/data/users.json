@@ -1,0 +1,16 @@
+[
+  {
+    "id": "user-1",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "bio": "Passionate software engineer with a focus on web development.",
+    "profilePicture": "https://example.com/profile/john.jpg"
+  },
+  {
+    "id": "user-2",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "bio": "Frontend developer with expertise in React and UI/UX design.",
+    "profilePicture": "https://example.com/profile/jane.jpg"
+  }
+]
