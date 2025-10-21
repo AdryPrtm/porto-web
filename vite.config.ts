@@ -6,12 +6,12 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: "./",
-	resolve: {
-		alias: {
-			Components: path.resolve(__dirname, "./src/components"),
-			Assets: path.resolve(__dirname, "./src/assets"),
-		},
-	},
-	plugins: [react(), tsconfigPaths(), tailwindcss()],
+  base: "./",
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, "./src/components"),
+      Assets: path.resolve(__dirname, "./src/assets"),
+    },
+  },
+  plugins: [react(), tsconfigPaths(), tailwindcss()],
 });
