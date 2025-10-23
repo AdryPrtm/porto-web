@@ -22,13 +22,13 @@ export const ExperienceFeatures: React.FC = () => {
           date={`${format(new Date(exp.startDate), "MMMM yyyy")} - ${
             exp.endDate ? format(new Date(exp.endDate), "MMMM yyyy") : "Present"
           }`}
-          description={
-            <ul className="list-disc pl-5 space-y-1">
-              {exp.description.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          }
+          // description={
+          //   <ul className="list-disc pl-5 space-y-1">
+          //     {exp.description.map((item, index) => (
+          //       <li key={index}>{item}</li>
+          //     ))}
+          //   </ul>
+          // }
         />
       ))}
     </div>
