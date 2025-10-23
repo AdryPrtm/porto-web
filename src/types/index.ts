@@ -11,6 +11,10 @@ export interface Profile {
   email: string;
   bio: string;
   profilePicture: string;
+  social?: {
+    app_name: string;
+    link: string;
+  }[];
 }
 
 export interface Project {
@@ -41,6 +45,6 @@ export interface Certificate {
   issuer: string;
   issueDate: string;
   expirationDate: string | null;
-  credentialId: string;
-  credentialUrl: string;
+  credentialId?: string;
+  credentialUrl?: string;
 }

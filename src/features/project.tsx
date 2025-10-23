@@ -4,16 +4,13 @@ import { CardWimages } from "../components/cards/cardImages";
 import { useGetProjectsQuery } from "../store/apiSlice";
 
 export const ProjectFeatures = memo(() => {
-  // 1. Mengganti nama `data` menjadi `projects` agar lebih jelas
   const { data: projects, error, isLoading } = useGetProjectsQuery();
 
   const sortedProjects = useMemo(() => {
-    // 2. Menggunakan `projects` dan melakukan pengecekan jika data belum ada
     if (!projects) return [];
     return [...projects]
       .sort(
         (a, b) =>
-          // 3. Mengurutkan berdasarkan `startDate` dari data dummy
           new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
       )
       .map((proj) => {
@@ -28,14 +25,12 @@ export const ProjectFeatures = memo(() => {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.toString()}</p>;
-  // 6. Pengecekan data kosong yang benar
   if (!projects?.length) return <p>No Project data available.</p>;
 
   return (
     <div className="w-full flex flex-col space-y-4">
       <h1 className="text-2xl font-bold text-center sm:text-left">Project</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {/* 7. Memetakan properti yang sudah disesuaikan ke komponen CardWimages */}
         {sortedProjects.map((proj) => (
           <CardWimages
             key={proj.id}

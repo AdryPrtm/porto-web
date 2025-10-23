@@ -1,22 +1,22 @@
 [
   {
-    "id": "proj-1",
+    "id": "1",
     "title": "E-commerce Platform",
     "description": "Developed a full-stack e-commerce platform with secure payment gateway integration.",
     "technologies": ["React", "Node.js", "Express", "MongoDB", "Stripe"],
-    "startDate": "2022-01-15",
-    "endDate": "2022-08-30",
+    "startDate": "2022-01",
+    "endDate": "2022-08",
     "githubUrl": "https://github.com/johndoe/ecommerce-platform",
     "liveUrl": "https://ecommerce.example.com",
     "imageUrl": "https://example.com/project/ecommerce.png"
   },
   {
-    "id": "proj-2",
+    "id": "2",
     "title": "Portfolio Website",
     "description": "Designed and built a personal portfolio website to showcase projects and skills.",
     "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
-    "startDate": "2023-03-01",
-    "endDate": "2023-04-15",
+    "startDate": "2023-03",
+    "endDate": "2023-04",
     "githubUrl": "https://github.com/janesmith/portfolio-website",
     "liveUrl": "https://janesmith.dev",
     "imageUrl": "https://example.com/project/portfolio.png"

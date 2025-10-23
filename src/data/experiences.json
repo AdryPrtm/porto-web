@@ -1,28 +1,41 @@
 [
   {
-    "id": "exp-1",
-    "title": "Senior Software Engineer",
-    "company": "Tech Solutions Inc.",
-    "location": "New York, NY",
-    "startDate": "2020-06-01",
-    "endDate": null,
+    "id": "1",
+    "title": "Cloud Computing's Student",
+    "company": "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+    "location": "Remote",
+    "startDate": "2023-02",
+    "endDate": "2023-07",
     "description": [
-      "Led a team of 5 engineers in developing scalable microservices.",
-      "Implemented CI/CD pipelines, reducing deployment time by 30%.",
-      "Mentored junior developers and conducted code reviews."
+      "Completed all courses and tasks given by the program while attending classes.",
+      "Completed a capstone project as a Cloud Engineer and developed an API for the project using Python Flask.",
+      "Communicated actively and effectively with team members and the mentors.",
+      "Managed cloud resources within the given budget."
     ]
   },
   {
-    "id": "exp-2",
-    "title": "Frontend Developer",
-    "company": "Web Innovations Co.",
+    "id": "2",
+    "title": "Frontend Web Developer",
+    "company": "Jalurbit",
     "location": "Remote",
-    "startDate": "2018-03-10",
-    "endDate": "2020-05-31",
+    "startDate": "2024-05",
+    "endDate": "2024-10",
     "description": [
-      "Developed responsive user interfaces using React and Redux.",
-      "Collaborated with UX/UI designers to translate wireframes into functional components.",
-      "Optimized application performance, leading to a 20% improvement in load times."
+      "Worked under tight and structured deadlines",
+      "Developed website front-end using React Framework and TypeScript language",
+      "Wrote clean and maintainable code for better team readability"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Web Application Technical Developer",
+    "company": "HIT Digital Indonesia",
+    "location": "On-site",
+    "startDate": "2025-07",
+    "description": [
+      "Worked under tight and structured deadlines",
+      "Developed website front-end using React Framework and TypeScript language",
+      "Wrote clean and maintainable code for better team readability"
     ]
   }
 ]

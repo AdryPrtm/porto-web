@@ -1,5 +1,7 @@
 import { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaRegCopyright } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
+import { useGetProfileQuery } from "../../store/apiSlice";
 
 const SOCIAL_ICONS: Record<string, IconType> = {
   linkedin: FaLinkedin,
@@ -7,7 +9,9 @@ const SOCIAL_ICONS: Record<string, IconType> = {
 };
 
 export const Contact = () => {
-  // const { data } = useGetProfileQuery();
+  const { data: profiles, isLoading, isError } = useGetProfileQuery();
+
+  const profile = profiles?.[0];
 
   return (
     <div className="bg-stone-950">
@@ -15,7 +19,7 @@ export const Contact = () => {
         <div className="flex flex-row space-x-20">
           <div className="flex flex-col space-y-2">
             <h3 className="font-semibold text-lg">REACH ME</h3>
-            {/* <div className='flex flex-row items-center space-x-2'>
+            <div className="flex flex-row items-center space-x-2">
               {isLoading && <span>Loading...</span>}
               {isError && <span>Error loading email</span>}
               {profile && (
@@ -24,12 +28,12 @@ export const Contact = () => {
                   <FaArrowRight size={12} />
                 </>
               )}
-            </div> */}
+            </div>
           </div>
           <div className="flex flex-col space-y-2">
             <h3 className="font-semibold text-lg">SOCIAL</h3>
             <div className="flex flex-row space-x-4 text-2xl">
-              {/* {data?.data[0].social?.map((item, idx) => {
+              {profile?.social?.map((item, idx) => {
                 const Icon = SOCIAL_ICONS[item.app_name.toLowerCase()];
                 return (
                   <a
@@ -42,7 +46,7 @@ export const Contact = () => {
                     {Icon ? <Icon /> : item.app_name}
                   </a>
                 );
-              })} */}
+              })}
             </div>
           </div>
         </div>
