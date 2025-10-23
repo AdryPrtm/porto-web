@@ -1,13 +1,12 @@
 import { memo, useState } from "react";
 import Output from "editorjs-react-renderer";
-import { EditorJsContent } from "types/editorTypes";
 
 interface CardProps {
   title: string;
   date: string;
   subtitle: string;
   link?: string;
-  description?: EditorJsContent;
+  description?: string;
   imageUrl?: string;
 }
 
