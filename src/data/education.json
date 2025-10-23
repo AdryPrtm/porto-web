@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "school": "Universitas Islam Negeri Sunan Gunung Djati Bandung",
+    "degree": "Bachelor of Engineering",
+    "fieldOfStudy": "Informatics Engineering",
+    "startDate": "2019-08",
+    "endDate": "2023-08",
+    "description": "Graduated with a GPA of 3.7. Active in various campus organizations and projects related to software development."
+  },
+  {
+    "id": "2",
+    "school": "SMAN 1 Cimalaka",
+    "degree": "High School Diploma",
+    "fieldOfStudy": "Science",
+    "startDate": "2016-07",
+    "endDate": "2019-06",
+    "description": "Focused on science and mathematics. Participated in the school's computer club."
+  }
+]

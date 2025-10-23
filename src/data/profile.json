@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1",
+    "name": "Adryan Putra Pratama",
+    "email": "adry.pprtm@gmail.com",
+    "bio": "Fresh graduate in Informatics Engineering with a strong passion for learning new technologies. Experienced in software development and design, with a background in UI/UX and creative problem-solving. Skilled in working collaboratively within a team and maintaining a positive, friendly attitude in a professional environment. Always eager to grow and adapt in the ever-evolving tech industry.",
+    "profilePicture": "/assets/placeholder.png",
+    "social": [
+      {
+        "app_name": "github",
+        "link": "https://github.com/AdryPrtm"
+      },
+      {
+        "app_name": "linkedin",
+        "link": "https://www.linkedin.com/in/adryprtm/"
+      }
+    ]
+  }
+]

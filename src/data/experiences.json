@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "title": "Cloud Computing's Student",
+    "company": "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+    "location": "Remote",
+    "startDate": "2023-02",
+    "endDate": "2023-07",
+    "description": [
+      "Completed all courses and tasks given by the program while attending classes.",
+      "Completed a capstone project as a Cloud Engineer and developed an API for the project using Python Flask.",
+      "Communicated actively and effectively with team members and the mentors.",
+      "Managed cloud resources within the given budget."
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Frontend Web Developer",
+    "company": "Jalurbit",
+    "location": "Remote",
+    "startDate": "2024-05",
+    "endDate": "2024-10",
+    "description": [
+      "Worked under tight and structured deadlines",
+      "Developed website front-end using React Framework and TypeScript language",
+      "Wrote clean and maintainable code for better team readability"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Web Application Technical Developer",
+    "company": "HIT Digital Indonesia",
+    "location": "On-site",
+    "startDate": "2025-07",
+    "description": [
+      "Worked under tight and structured deadlines",
+      "Developed website front-end using React Framework and TypeScript language",
+      "Wrote clean and maintainable code for better team readability"
+    ]
+  }
+]
